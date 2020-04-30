@@ -37,7 +37,7 @@
 
 		public function product(){
 			// $products = $this->cartModel->getProducts();
-			if($_GET['submit']){
+			if(isset($_GET['submit'])){
 				
 				$cartData = [
 					'productId' => $_GET['productId'],
@@ -129,7 +129,7 @@
 				}				
 			}//end of POST['update']
 
-			if($_GET['productId']){
+			if(isset($_GET['productId'])){
 				// var_dump($_GET['productId']);
 				if(!$this->cartModel->deleteTempCartById($_GET['productId'])){
 					die('Something went wrong with delete!');				
@@ -141,7 +141,7 @@
 
 		public function checkout(){
 
-			if($_POST['submit']){
+			if(isset($_POST['submit'])){
 				$_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 				
 				$data = [
@@ -188,11 +188,11 @@
 
 		public function productUpload(){
 
-			if($_POST['submit']){
+			if(isset($_POST['submit'])){
 				
 				$_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 				
-// //確認檔案沒有重複，才存入資料與檔案
+//確認檔案沒有重複，才存入資料與檔案
 				if(!empty($_POST['productName']) && !empty($_POST['price']) && !empty($_FILES['image']['name']) && !empty($_POST['description'])) {
 					
 					if(file_exists('img/'.$_FILES['image']['name'])){
