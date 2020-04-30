@@ -1,0 +1,13 @@
+.container{
+	max-width: 960px;
+}
+.pricetag:before{
+  content: 'NT$ ';
+}
+.thumbnail{
+  width: 276px;
+}
+label{
+	display: inline-block;
+	margin-bottom: .5rem;
+}
