@@ -24,7 +24,7 @@
 					<option value="2">2</option>
 					<option value="3">3</option>
 				</select>
-				<input type="submit" name="submit" value="submit"></input>
+				<button type="submit" name="submit" >放入購物車</button>
 				</form>
 			</div>
 		</div>

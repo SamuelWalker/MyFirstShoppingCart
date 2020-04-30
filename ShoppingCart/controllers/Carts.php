@@ -43,6 +43,7 @@
 					'productId' => $_GET['productId'],
 					'quantity' => $_GET['quantity']
 				];
+
 				
 //Check if the product about to add into the cart already existed
 				if($this->cartModel->checkTempCartById($_GET['productId'])){
@@ -85,13 +86,22 @@
 
 		public function recalculateCart(){
 
-			if($_POST['update']){
+			if(isset($_POST['update'])){
+				//Filter quantity input, if is not integer, don't do anything
+				foreach($_POST['quantity'] as $q){
+					if(!filter_var($q, FILTER_VALIDATE_INT) === false){
+						}else{
+							header('location:cart.php');
+						}
+				}
 				$quantity = $_POST['quantity'];
 				$pId = $_POST['productId'];
 				// var_export($_POST['productId']);
 				
 				//switch case if post['quantity'] != tempcart quantity then ...
-				
+
+				//filter_var($int, FILTER_VALIDATE_INT)
+				if(filter_)
 				foreach ($pId as $key => $value) {
 					// echo 'hmm..';
 					// var_dump($value);
