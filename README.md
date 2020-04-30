@@ -1,3 +1,2 @@
-# hellow-old
-my frist trial
-Give it a shot, let bullet flys
+# My First Shopping Cart
+My first project to partly showcase what I've already learned.
