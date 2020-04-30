@@ -24,7 +24,7 @@
 		<div class="row">
 			<h4 class="col-md-12 d-flex justify-content-between align-items-center">
 				<span>購物車</span>
-				<span class="badge badge-secondary"><?php echo $data['totalQuantity']->totalQuantity; ?></span>
+				<span class="badge badge-secondary">商品總數 <?php echo $data['totalQuantity']->totalQuantity; ?></span>
 			</h4>
 		<!-- </div>
 		<div class="row"> -->

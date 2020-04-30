@@ -21,27 +21,21 @@
 		     		<div class="bg-light p-2 mb-3 pricetag"><?php echo $product->productPrice; ?></div>
 	      	</div>
 	      	<input type="hidden" name="productId[]" value="<?php echo $product->productId;?>">
-	      	<div class="col-lg-1 col-md-1">
-    	     	<ul>
-    	     		<li>
-    	     			<input class="btn btn-light" name="update" type="submit" value="update">
-    	     		</li>
-    	     		<li>
-    	     			<a class="btn btn-light" href="recalculateCart.php/?productId=<?php echo $product->productId; ?>">Delete</a>
-    	     		</li>
-    	     	</ul>
-    	     </div>     
+	      	<div class="col-lg-1 col-md-1">    	     	
+    	     	<a class="btn btn-dark" href="recalculateCart.php/?productId=<?php echo $product->productId; ?>">Delete</a>    	     	
+    	    </div>     
 		    </div>
 			</div>
      <?php
         $data['total'] += $product->subtotal;
       	endforeach;?>
+      	<button class="btn btn-primary" name="update" type="submit">修改</button>
     </form>
 		
 		<!-- <input name="proceedToRetailCheckout" class="a-button-input" type="submit" value="Proceed to checkout" aria-labelledby="sc-buy-box-ptc-button-announce"> -->
 
-    <p>小計: NT$<?php echo $data['total'];?></p>
-    <a class="btn btn-light"href="checkout.php">結帳</a>
+    <span>小計: NT$<?php echo $data['total'];?></span>
+    <a class="btn btn-primary"href="checkout.php">前去結帳</a>
     
 
 <?php require 'inc/footer.php';?>

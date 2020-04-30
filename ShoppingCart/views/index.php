@@ -47,7 +47,7 @@
     <div class="album py-5 bg-light">
       <div class="container">
         
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-6">
             <div class="card mb-6 shadow-sm">
             	<a href="#">
@@ -74,7 +74,7 @@
               </a> 
             </div>
           </div>           
-        </div>
+        </div> -->
         <?php foreach($data['products'] as $product):;?>
           <?php if($data['count']%3 == 0):;?>
             <div class="row">
